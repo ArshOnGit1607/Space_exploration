@@ -36,6 +36,7 @@
             font-family: 'Arial', sans-serif;
             background: linear-gradient(to bottom, #000428, #004e92);
             line-height: 1.6;
+            text-decoration: none;
         }
         header>div{color:white;
             font-weight: bold;
@@ -57,11 +58,13 @@
         h1{
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
         }
-        div>nav{display:flex;
+        div>nav{
+            display:flex;
             position:absolute;
             top:20px;
             text-decoration:none;
             right:50px;
+            background: rgba(255, 255, 255, 0.05);
             
             
         }
@@ -113,7 +116,7 @@
             /* background: rgba(255, 255, 255, 0.05); */
             text-shadow: #a8dadc 0 0 30px;
             /* border-radius: 10px; */
-            text-decoration: none ;
+            text-decoration-style: none ;
             
         }
         .stat-box {
@@ -137,6 +140,41 @@
             margin-top: 10px;
             text-decoration: none;
         }
+        .timeline {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .timeline>.timeline-item>p{
+            color:white;
+            text-decoration: none;  
+        }
+        .timeline h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #ffd700;
+            text-shadow: #a8dadc 0 0 30px;
+            
+
+        }
+
+        .timeline-item {
+            padding: 20px;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #ffd700;
+            border-radius: 5px;
+        }
+
+        .timeline-item h3 {
+            color: #a8dadc;
+            margin-bottom: 10px;
+        }
+
 
     </style>
 </head>
@@ -154,7 +192,6 @@
         <nav>
             <a href="">Home</a>
             <a href="">Missions</a>
-            <a href="">Visions</a>
             <a href="">History</a>
             <a href="">v</a>
         </nav>
@@ -195,7 +232,28 @@
                 <div class="stat-label">People in Space</div>
             </div>
     </div>
-    
+    <div class="timeline">
+            <h2>Historic Milestones</h2>
+            <div class="timeline-item">
+                <h3>1965 - First Spacewalk</h3>
+                <p>Alexei Leonov performed the first-ever spacewalk, spending 12 minutes outside his Voskhod 2 spacecraft, paving the way for future extravehicular activities.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1977 - Voyager Golden Record</h3>
+                <p>NASA launched Voyager 1 and 2 with golden records containing sounds and images from Earth, intended as a message to potential extraterrestrial life.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>1995 - First Exoplanet Discovery</h3>
+                <p>Astronomers discovered 51 Pegasi b, the first confirmed exoplanet orbiting a sun-like star, revolutionizing our understanding of planetary systems.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2014 - Rosetta's Comet Landing</h3>
+                <p>The Philae lander became the first spacecraft to successfully land on a comet, providing unprecedented data about these ancient celestial objects.</p>
+            </div>
+        </div>
+    </div>
+
+
 
 
    
