@@ -12,6 +12,7 @@
         padding: 0%;
     }
         video{
+            display: flex;
             width:100%;
             height:100%;
             opacity:70%;
@@ -36,24 +37,98 @@
 
         }
 
-        header>div>p.tagline{position:absolute;
-            top:50px
+        header>div>p.tagline{
+            color:aquamarine;
+            position:absolute;
+            top:50px;
+        }
+        h1{
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        div>nav{
+            position:absolute;
+            top:20px;
+            right:50px;
+            
+            
+        }
+        div>nav>a{
+            position: sticky;
+            color:azure;
+            font-size: 30px;
+            margin-left: 20px;
             
         }
 
-    
+        .mission-cards{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+            position:absolute;
+            left:200px;
+            bottom:200px;
+            width: 400px;
+            height:400px;
+            
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+            
+        }
+
 
     </style>
 </head>
 <body>
-    <video z-index src="./107991-678971274_large.mp4" autoplay loop muted></video>
+    <div>
+    <video  src="./media/107991-678971274_large.mp4" autoplay loop muted></video>
+    </div>
     <header>
             <div><h1>🚀 Space Exploration</h1>
                 <p class="tagline">~Journey Beyond Our World</p>
             </div>
-
+    
     </header>
+    <div>
+        <nav>
+            <a href="">Home</a>
+            <a href="">Missions</a>
+            <a href="">Visions</a>
+            <a href="">History</a>
+            <a href="">v</a>
+        </nav>
 
+    </div>
+    <div class="container">
+        <div class="mission-cards">
+            <div class="card">
+                <h2>🌙 Moon Missions</h2>
+                <p>Humanity's first giant leap began with the Apollo program. The Moon remains a crucial stepping stone for future deep space exploration and potential lunar bases.
+                </p>
+                <img src="./media/neil armstrong.jpeg" alt="neil armstrong">
+            </div>
+            <div class="card">
+                <h2>🔴 Mars Exploration</h2>
+                <p>Mars Orbiter Mission (MOM), India's first interplanetary mission to planet Mars was launchedonboard PSLV-C25 on November 05, 2013. ISRO has become the fourth space agency to successfully send a spacecraft to Mars orbit</p>
+                <img src="./media/mission mangalyan.jpeg" alt="mission mangalyan">
+            </div>
+            <div class="card">
+                <h2>🛰️ Space Stations</h2>
+                <p>The International Space Station serves as humanity's laboratory in orbit, where astronauts conduct experiments that benefit life on Earth.</p>
+                <img src="media/international space station.jpeg" alt="interational space station">
+            </div>
+            </div>
+        </div>
+
+
+
+    </div>
 
 
    
