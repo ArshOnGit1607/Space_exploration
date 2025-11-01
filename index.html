@@ -10,17 +10,29 @@
             margin:0;
         box-sizing: border-box;
         padding: 0%;
+        
     }
-        video{
-            display: flex;
-            width:100%;
-            height:100%;
-            opacity:70%;
-            z-index: 1;
-            max-width: none;
-    }
+        .video-container {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		video {
+			position:fixed;
+			z-index: -1;
+			width: 100%;
+			height: 100vh;
+			max-width: none;
+            z-index: -1;
+		}
+    
     
      body {
+        
             font-family: 'Arial', sans-serif;
             background: linear-gradient(to bottom, #000428, #004e92);
             line-height: 1.6;
@@ -45,9 +57,10 @@
         h1{
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
         }
-        div>nav{
+        div>nav{display:flex;
             position:absolute;
             top:20px;
+            text-decoration:none;
             right:50px;
             
             
@@ -57,20 +70,23 @@
             color:azure;
             font-size: 30px;
             margin-left: 20px;
+            text-decoration: none;
             
         }
 
         .mission-cards{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display:flex;
+            /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
             gap: 30px;
             margin-top: 80px;
             position:absolute;
-            left:200px;
-            bottom:200px;
+            left:220px;
+            bottom:150px;
             width: 400px;
-            height:400px;
-            
+            height:500px;
+            gap:80px;
+            opacity:70%;
+        
         }
         .card {
             background: rgba(255, 255, 255, 0.1);
@@ -79,15 +95,54 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: transform 0.3s ease;
+            height:100%;
+            font-weight: bold;
+            color:aliceblue;       
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .stats{
+            display:flex;
+            justify-content:space-around;
+            flex-wrap:wrap;
+            margin-top: 60px;
+            padding: 40px;
+            /* background: rgba(255, 255, 255, 0.05); */
+            text-shadow: #a8dadc 0 0 30px;
+            /* border-radius: 10px; */
+            text-decoration: none ;
             
         }
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            min-width: 200px;
+            text-decoration: none;
+        }
 
+        .stat-number {
+            font-size: 3em;
+            color: #ffd700;
+            font-weight: bold;
+            text-decoration: none;
+           
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #a8dadc;
+            margin-top: 10px;
+            text-decoration: none;
+        }
 
     </style>
 </head>
 <body>
-    <div>
-    <video  src="./media/107991-678971274_large.mp4" autoplay loop muted></video>
+    <div class="video-container">
+        <video  src="./media/107991-678971274_large.mp4" autoplay loop muted></video>
     </div>
     <header>
             <div><h1>🚀 Space Exploration</h1>
@@ -120,15 +175,27 @@
             </div>
             <div class="card">
                 <h2>🛰️ Space Stations</h2>
-                <p>The International Space Station serves as humanity's laboratory in orbit, where astronauts conduct experiments that benefit life on Earth.</p>
-                <img src="media/international space station.jpeg" alt="interational space station">
+                <p>The International Space Station serves as humanity's laboratory in orbit, where astronauts conduct experiments that benefit life on Earth.The ISS is a joint project between five space agencies:NASA,Roscosmos,ESA,JAXA and CSA. </p>
+                <img style="width:300px;position: absolute; right:50px;"src="media/international space station.jpeg" alt="interational space station">
             </div>
             </div>
         </div>
-
-
-
     </div>
+    <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Humans on the Moon</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Active Mars Rovers</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">600+</div>
+                <div class="stat-label">People in Space</div>
+            </div>
+    </div>
+    
 
 
    
