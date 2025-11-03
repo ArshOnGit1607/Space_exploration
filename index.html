@@ -21,7 +21,7 @@
 			overflow: hidden;
 		}
 
-		video {
+		#background-video {
 			position:fixed;
 			z-index: -1;
 			width: 100%;
@@ -174,13 +174,67 @@
             color: #a8dadc;
             margin-bottom: 10px;
         }
+         .planets-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
 
+        .planets-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #ffd700;
+            text-shadow: #a8dadc 0 0 30px;
 
+        }
+
+        .planets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .planet-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .planet-card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .planet-card h3 {
+            color: #a8dadc;
+            margin-bottom: 10px;
+        }
+        .planet-icon{
+            font-size: 3em;
+            margin-bottom: 15px;
+            width: 100px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        .planet-card>p{color:azure;}
     </style>
 </head>
 <body>
     <div class="video-container">
-        <video  src="./media/107991-678971274_large.mp4" autoplay loop muted></video>
+        <video id="background-video" src="./media/107991-678971274_large.mp4" autoplay loop muted></video>
     </div>
     <header>
             <div><h1>🚀 Space Exploration</h1>
@@ -253,7 +307,54 @@
         </div>
     </div>
 
+    <div class="planets-section" id="planets">
+        <h2>Our Solar System</h2>
+        <div class="planets-grid">
+            <div class="planet-card">
+                <div class="planet-icon"><video src="media/vecteezy_a-large-gray-object-in-the-middle-of-a-star-filled-sky_50484835.mp4" loop autoplay muted></video></div>
+                    <h3>Mercury</h3>
+                    <p>The smallest planet and closest to the Sun with extreme temperature variations.</p>
+        <div class="planet-card">
+                    <div class="planet-icon"><video src="media/vecteezy_planet-venus-animated_24916450.mp4" loop autoplay muted></video></div>
+                    <h3>Venus</h3>
+                    <p>Earth's twin in size but with a toxic atmosphere and surface hot enough to melt lead.</p>
+                </div>
+                <div class="planet-card">
+                    <div class="planet-icon"><video src="./media/small-vecteezy_planet-earth-in-space-rotates-from-day-into-night-as-city_9170169_small.mp4" loop autoplay muted></video></div>
+                    <h3>Earth</h3>
+                    <p>Our home planet, the only known world with abundant liquid water and life.</p>
+                </div>
+                <div class="planet-card">
+                    <div class="planet-icon"><video src="./media/small-vecteezy_mars-planet-animated_28016569_small.mp4"loop autoplay muted></video></div>
+                    <h3>Mars</h3>
+                    <p>The Red Planet with polar ice caps and the largest volcano in our solar system.</p>
+                </div>
+                <div class="planet-card">
+                    <div class="planet-icon"><video src="./media/small-vecteezy_jupiter-planet-animated_27122838_small.mp4" loop autoplay muted></video></div>
+                    <h3>Jupiter</h3>
+                    <p>The largest planet with a Great Red Spot storm larger than Earth itself.</p>
+                </div>
+                <div class="planet-card">
+                    <div class="planet-icon"><video src="./media/small-vecteezy_ai-generated-a-detailed-close-up-view-of-a-planet-in-space_38972644_small.mp4"loop autoplay muted></video></div>
+                    <h3>Saturn</h3>
+                    <p>Famous for its magnificent ring system made of ice and rock particles.</p>
+                </div>
+                <div class="planet-card">
+                    <div class="planet-icon"><video src="media/small-vecteezy_uranus-planet-animated_28016271_small.mp4"loop autoplay muted></video></div>
+                    <h3>Uranus</h3>
+                    <p>An ice giant that rotates on its side, creating extreme seasonal variations.</p>
+                </div>
+                <div class="planet-card">
+                    <div class="planet-icon"><video src="media/small-vecteezy_neptune-planet-animated_28016099_small.mp4"loop autoplay muted></video></div>
+                    <h3>Neptune</h3>
+                    <p>The windiest planet with supersonic storms and a deep blue atmosphere.</p>
+                </div>
+            </div>
+        </div>
 
+
+
+    </div>
 
 
    
